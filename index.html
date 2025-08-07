@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>LeftorRight</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+        <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+        <script type="py" src="./ArtAdjNoun.py" config="./pyscript.json"></script>
+    </head>
+    <body>
+        <h1 class="center-text">How does this phrase make you feel?</h1>
+        <h2 class="center-text">Left for Bad and Right for Good</h1>
+        <br>
+        <iframe src="randomPhrase.html"  title="The Phrase" text-align=center scrolling=No style="border:5px solid black;">
+        </iframe>
+        <br>
+        <br>
+        <br>
+        <button onClick="window.location.reload();">Bad</button>
+        <button onClick="window.location.reload();">Good</button>
+        <script>                       
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "ArrowLeft")
+                {                
+                window.location.reload(true);
+                } 
+                });
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "ArrowRight") {                
+                window.location.reload(true);
+                } 
+                });
+        </script>
+<!--JS script that creates a listening event to run a python script in the backend -->
+        <script>
+        window.addEventListener('load', function() {
+        // This will be called on page load/refresh
+        fetch('/execute_python_script') // Send request to Python backend
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+                });
+        });
+        </script>
+    </body>
+</html>

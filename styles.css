@@ -1,0 +1,50 @@
+body {background-color: rgb(45, 157, 172);
+    text-align: center;
+    }
+h1   {color: rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: bold;
+    text-align: center;
+    }
+h2  {color: rgb(36, 15, 175);
+    font-family: "Helvetica";
+     font-weight: bold;
+    text-align: center;
+    }
+h3  {color: rgb(36, 15, 175);
+    font: 100px Helvetica italic center;
+    text-align: center
+    }
+p   {color: rgb(0, 0, 0);
+    font-family: "Helvetica";
+    font-weight: bold;
+    text-align: center;
+    border:10px solid rgb(0, 0, 0);
+    }
+button {width: 425px;
+      height: 100px;
+      font-size: 50px;
+      font-weight: bold;
+      border: 10px black;
+    }
+iframe {background-color: rgb(249, 251, 252);
+    width: 500px;
+    height: 50px;
+    text-align:center;
+      }
+div {
+
+}
+ .box { width: 300px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        border: 5px solid rgb(0, 0, 0);
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+ }
+this designates a class
+.class {}
+
+this designates an id
+#identificationtag {}
